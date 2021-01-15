@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 import './Product.css';
 
 
 
-const Product = ({ product }) => {
-    console.log(product)
-    const { img, name, seller, price, stock, star, features } = product;
-    console.log(features)
+const Product = ({product, addToCart}) => {
+    // console.log(props)
+    // const addToCart = props.addToCart;
+    const { img, name, seller, price, stock, features } = product;
+    // console.log(features)
 
     return (
         <div className="d-flex product">
@@ -20,14 +22,17 @@ const Product = ({ product }) => {
                     <div className="price">
                         <h6 style={{ color: '#B82704' }}>Price: ${price}</h6>
                         <p style={{ color: '#1AA160' }}>Only {stock} left in stock -order soon </p>
+                        <button onClick={() => addToCart(product)} className="main-btn"><AiOutlineShoppingCart /> add to cart</button>
                     </div>
                     <div className="features ml-5">
                         <h6>Features</h6>
                         {
-                            features.map(f => <li style={{ color: '#D96B68'}}>{f.description}: {f.value}</li>)
+                            features.map(f => <li style={{ color: '#9E280A'}}>{f.description}: {f.value}</li>)
                         }
+                
                     </div>
                 </div>
+                
             </div>
         </div>
     );

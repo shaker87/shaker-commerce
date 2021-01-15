@@ -12,6 +12,10 @@
     color: blue;
     font-weight: normal;
 }
-.product-description p{
-    
+.main-btn{
+    display: block;
+    padding: 0px 30px;
+    background-color: #F0C14B;
+    border: 1px solid gray;
+    border-radius: 3px;
 }

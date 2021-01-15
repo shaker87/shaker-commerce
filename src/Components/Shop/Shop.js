@@ -1,22 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { CartContext } from '../../App';
 import fakeData from '../../fakeData';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 
 
 const Shop = () => {
-    const [product, setProduct] = useState(fakeData.slice(0,10))
+    const [products, setProducts] = useState(fakeData.slice(0,10))
+  
 
-    console.log(product)
+    const [cart, setCart] = useContext(CartContext)
+
+    const addToCart = (product) => {
+        console.log("product added", product)  
+        setCart([...cart, product])
+    }
     return (
         <div className="shop-container">
            <div className="product-container">
                {
-                   product.map(product => <Product product={product} key={product.key}></Product>)
+                   products.map(pd => <Product product={pd} addToCart={addToCart} key={pd.key}></Product>)
                }
            </div>
            <div className="cart-container">
-               <h1>this is cart</h1>
+               <Cart cart={cart}></Cart>
            </div>
         </div>
     );
