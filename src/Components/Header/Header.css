@@ -1,0 +1,27 @@
+
+.header{
+    background-color: #1E1E1E;
+    color: #fff;
+    /* height: 55px; */
+    width: 100%;
+    padding: 8px 20px;
+    margin: 0px auto;
+}
+.item-container{
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    margin: 0px 15px;
+}
+.inputStyle{
+    width: 600px;
+}
+.header h6{
+    font-size: 12px;
+}
+
+.highlights{
+    display: block;
+    font-size: 17px;
+}

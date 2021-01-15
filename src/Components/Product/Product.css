@@ -1,0 +1,17 @@
+.product{
+    display: flex;
+    margin: 20px 5px;
+    border-bottom: 1px solid gray;
+    padding: 15px;
+}
+.product-description{
+    margin-left: 30px;
+}
+.product-description h5{
+    font-size: 18px;
+    color: blue;
+    font-weight: normal;
+}
+.product-description p{
+    
+}
