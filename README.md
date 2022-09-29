@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+Live: Open [https://shaker-ecommerce.netlify.app/) to view it in the browser.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
